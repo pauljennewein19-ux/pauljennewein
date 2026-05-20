@@ -1,0 +1,88 @@
+:root {
+  --fg: #111;
+  --muted: #666;
+  --bg: #fafaf7;
+  --accent: #111;
+  --maxw: 640px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fg: #eee;
+    --muted: #999;
+    --bg: #111;
+    --accent: #eee;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 6rem 1.5rem 4rem;
+}
+
+header { margin-bottom: 4rem; }
+
+h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin: 0 0 1.25rem;
+}
+
+.lede {
+  margin: 0;
+  color: var(--muted);
+}
+
+section { margin-bottom: 3rem; }
+
+ul { list-style: none; padding: 0; margin: 0; }
+
+.projects li,
+.links li {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(127, 127, 127, 0.2);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.projects li span { color: var(--muted); font-size: 0.9rem; }
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease;
+}
+
+a:hover { border-bottom-color: var(--accent); }
+
+footer {
+  margin-top: 5rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}

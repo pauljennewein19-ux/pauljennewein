@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Paul Jennewein</title>
+    <meta name="description" content="Portfolio von Paul Jennewein." />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Paul Jennewein</h1>
+        <p class="lede">Kurze Zeile über dich — was du machst, woran du arbeitest.</p>
+      </header>
+
+      <section>
+        <h2>Arbeit</h2>
+        <ul class="projects">
+          <li>
+            <a href="#">Projekt eins</a>
+            <span>Kurzbeschreibung</span>
+          </li>
+          <li>
+            <a href="#">Projekt zwei</a>
+            <span>Kurzbeschreibung</span>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Kontakt</h2>
+        <ul class="links">
+          <li><a href="mailto:pauljennewein19@gmail.com">E-Mail</a></li>
+          <li><a href="https://github.com/" rel="me">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/" rel="me">LinkedIn</a></li>
+        </ul>
+      </section>
+
+      <footer>
+        <p>&copy; <span id="year"></span> Paul Jennewein</p>
+      </footer>
+    </main>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
