@@ -77,8 +77,6 @@
 
     .label{font-size:13px;font-weight:600;letter-spacing:0.13em;text-transform:uppercase;color:var(--muted)}
     .section{margin-top:96px}
-    .section-head{margin-bottom:30px}
-    .section-sub{max-width:var(--text-max);color:var(--muted);font-size:16px;margin-top:12px}
 
     .grid{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}
 
@@ -143,16 +141,12 @@
 
     <!-- ============ PROJEKTE ============ -->
     <section class="section fade d3">
-      <div class="section-head">
-        <div class="label">Projekte</div>
-        <p class="section-sub">Eine Auswahl an Projekten, an denen ich mitgewirkt habe.</p>
-      </div>
 
       <div class="grid">
 
-        <!-- ROW 1 · 808factory -->
+        <!-- ===== REIHE 1 · Konzerte ===== -->
 
-        <!-- 1 · Baran Kok (Foto: @lilly.bkb) — Kachel-Link + separater, nur-bei-Hover-sichtbarer Foto-Credit -->
+        <!-- Baran Kok (Foto: @lilly.bkb) — Kachel-Link + separater, nur-bei-Hover-sichtbarer Foto-Credit -->
         <div class="tile">
           <img src="bilder/baran-kok.jpg" alt="Baran Kok live auf der Bühne – 808factory, Tourstopp Wien">
           <a class="tile-link" href="https://www.instagram.com/p/DO3fJEmiA9F/" target="_blank" rel="noopener" aria-label="Baran Kok – 808factory"></a>
@@ -163,7 +157,16 @@
           </span>
         </div>
 
-        <!-- 2 · Aymen & Amo (eigenes Foto) -->
+        <!-- Dahabflex (Standbild aus Konzertvideo) -->
+        <a class="tile">
+          <img src="bilder/dahabflex.jpg" alt="Dahabflex live auf der Bühne – 808factory, Tourstopp Wien">
+          <span class="overlay">
+            <span class="o-name">Dahabflex<span class="o-sub">Tourstopp Wien</span></span>
+            <span class="o-desc">808factory — Advancing &amp; Eventmanagement.</span>
+          </span>
+        </a>
+
+        <!-- Aymen & Amo (eigenes Foto) -->
         <a class="tile" href="https://www.instagram.com/p/DOOYxY2DN2W/" target="_blank" rel="noopener">
           <img src="bilder/aymen-amo.jpg" alt="Aymen &amp; Amo – Show bei 808factory">
           <span class="overlay">
@@ -172,36 +175,9 @@
           </span>
         </a>
 
-        <!-- 3 · Interview · Union 1850 (Video-Loop, stumm) -->
-        <a class="tile" href="https://www.instagram.com/reel/DXoeS1kjedu/" target="_blank" rel="noopener">
-          <video src="bilder/interview-union1850.mp4" autoplay muted loop playsinline poster="bilder/interview-union1850-poster.jpg" aria-label="Interview Union 1850 – 808factory"></video>
-          <span class="overlay">
-            <span class="o-name">Union 1850</span>
-            <span class="o-desc">808factory — Interview &amp; Content.</span>
-          </span>
-        </a>
+        <!-- ===== REIHE 2 · Kollektive ===== -->
 
-        <!-- ROW 2 -->
-
-        <!-- 4 · Interview · Romero (Video-Loop, stumm) -->
-        <a class="tile" href="https://www.instagram.com/reel/DWQ3nkVDWdE/" target="_blank" rel="noopener">
-          <video src="bilder/interview-romero.mp4" autoplay muted loop playsinline poster="bilder/interview-romero-poster.jpg" aria-label="Interview Romero – 808factory"></video>
-          <span class="overlay">
-            <span class="o-name">Romero</span>
-            <span class="o-desc">808factory — Interview &amp; Content.</span>
-          </span>
-        </a>
-
-        <!-- 5 · OYA! -->
-        <a class="tile" href="https://oyacollective.com" target="_blank" rel="noopener">
-          <img src="bilder/oya.jpg" alt="OYA! Open Air Festival">
-          <span class="overlay">
-            <span class="o-name">OYA! Open Air Festival</span>
-            <span class="o-desc">OYA! Kunst- und Kulturverein — Projekt- &amp; Eventmanagement.</span>
-          </span>
-        </a>
-
-        <!-- 6 · Mahlwerk — Logo (Stern auf schwarzem Grund, füllt die Kachel) -->
+        <!-- Mahlwerk — Logo (Stern auf schwarzem Grund, füllt die Kachel) -->
         <a class="tile logo-tile big" href="https://www.instagram.com/mahlwerk.mwk" target="_blank" rel="noopener">
           <img src="bilder/mahlwerk-logo.jpg" alt="Mahlwerk Kollektiv für Musik &amp; Kultur">
           <span class="overlay">
@@ -210,12 +186,41 @@
           </span>
         </a>
 
-        <!-- 7 · Ritmo Cattivo — Logo -->
+        <!-- OYA! Open Air Festival -->
+        <a class="tile" href="https://oyacollective.com" target="_blank" rel="noopener">
+          <img src="bilder/oya.jpg" alt="OYA! Open Air Festival">
+          <span class="overlay">
+            <span class="o-name">OYA! Open Air Festival</span>
+            <span class="o-desc">OYA! Kunst- und Kulturverein — Projekt- &amp; Eventmanagement.</span>
+          </span>
+        </a>
+
+        <!-- Ritmo Cattivo — Logo -->
         <a class="tile logo-tile" href="https://www.instagram.com/ritmocattivo" target="_blank" rel="noopener">
           <img src="bilder/ritmo-logo.png" alt="Ritmo Cattivo">
           <span class="overlay">
             <span class="o-name">Ritmo Cattivo</span>
             <span class="o-desc">Eventmanagement &amp; Booking.</span>
+          </span>
+        </a>
+
+        <!-- ===== REIHE 3 · Interviews (mittig zentriert) ===== -->
+
+        <!-- Interview · Union 1850 (Video-Loop, stumm) -->
+        <a class="tile" href="https://www.instagram.com/reel/DXoeS1kjedu/" target="_blank" rel="noopener">
+          <video src="bilder/interview-union1850.mp4" autoplay muted loop playsinline poster="bilder/interview-union1850-poster.jpg" aria-label="Interview Union 1850 – 808factory"></video>
+          <span class="overlay">
+            <span class="o-name">Union 1850</span>
+            <span class="o-desc">808factory — Interview &amp; Content.</span>
+          </span>
+        </a>
+
+        <!-- Interview · Romero (Video-Loop, stumm) -->
+        <a class="tile" href="https://www.instagram.com/reel/DWQ3nkVDWdE/" target="_blank" rel="noopener">
+          <video src="bilder/interview-romero.mp4" autoplay muted loop playsinline poster="bilder/interview-romero-poster.jpg" aria-label="Interview Romero – 808factory"></video>
+          <span class="overlay">
+            <span class="o-name">Romero</span>
+            <span class="o-desc">808factory — Interview &amp; Content.</span>
           </span>
         </a>
 
