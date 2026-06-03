@@ -1,3 +1,13 @@
 .claude/
 .DS_Store
 *.pdf
+
+# Quell-/Arbeitsdateien – nicht auf die Website/GitHub
+Fotos & Videos/
+files.zip
+
+# Original-Medien (groß) – nur die optimierten Versionen in bilder/ kommen ins Repo
+bilder/original/
+
+# Lokales Hilfsprogramm (statisches ffmpeg) – gehört nicht ins Repo
+.tools/
