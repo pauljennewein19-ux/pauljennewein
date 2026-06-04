@@ -7,16 +7,22 @@
 <meta name="description" content="Paul Jennewein arbeitet als Booker und Eventmanager in Wien. Aktuell bei 808factory und im Mahlwerk Kollektiv, engagiert beim OYA! Kunst- und Kulturverein und bei Ritmo Cattivo. B.Sc. Wirtschafts- und Sozialwissenschaften, WU Wien.">
 <meta name="author" content="Paul Jennewein">
 <link rel="canonical" href="https://pauljennewein.com/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://pauljennewein.com/">
 <meta property="og:title" content="Paul Jennewein — Booking, Eventmanagement, Marketing & Finance in Wien">
 <meta property="og:description" content="Booker und Eventmanager in Wien. Aktuell bei 808factory und im Mahlwerk Kollektiv, engagiert beim OYA! Kunst- und Kulturverein und bei Ritmo Cattivo.">
 <meta property="og:locale" content="de_AT">
+<meta property="og:image" content="https://pauljennewein.com/bilder/hero-poster.jpg">
+<meta property="og:image:alt" content="Paul Jennewein – Konzert in Wien">
 
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Paul Jennewein">
 <meta name="twitter:description" content="Booking, Eventmanagement, Marketing & Finance in Wien.">
+<meta name="twitter:image" content="https://pauljennewein.com/bilder/hero-poster.jpg">
 
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -77,11 +83,11 @@
     background:#0c0c0c;transform:scale(.64);transform-origin:center center;will-change:transform}
   .hero-media img,.hero-media video{width:100%;height:100%;object-fit:cover;display:block}
 
-  /* ---------- Reveal-Mechanik (Scroll) ---------- */
+  /* ---------- Reveal-Mechanik (Scroll) – Startzustand nur mit JS, sonst alles sichtbar ---------- */
   .io{transition:opacity .85s ease, transform .95s cubic-bezier(.2,.8,.3,1)}
-  .io.t-left{opacity:0;transform:translateX(-64px)}
-  .io.t-right{opacity:0;transform:translateX(64px)}
-  .io.in{opacity:1;transform:none}
+  .js .io.t-left{opacity:0;transform:translateX(-64px)}
+  .js .io.t-right{opacity:0;transform:translateX(64px)}
+  .js .io.in{opacity:1;transform:none}
 
   /* ---------- 3 · Einleitung (wechselseitig) ---------- */
   .intro{text-align:center;margin:0 auto;max-width:920px}
@@ -145,7 +151,7 @@
 
   @media(prefers-reduced-motion:reduce){
     .n-paul,.n-jenne{animation:none;opacity:1}
-    .io,.io.t-left,.io.t-right{opacity:1;transform:none;transition:none}
+    .js .io.t-left,.js .io.t-right{opacity:1;transform:none;transition:none}
     .js .tile{opacity:1;transform:none}
     .tile,.tile:hover{transition:none}
     .hero-media{transform:none!important}
@@ -157,15 +163,17 @@
   <main class="wrap">
 
     <!-- 1 · NAME -->
-    <header class="landing">
-      <div class="name n-paul">Paul</div>
-      <div class="name n-jenne">Jennewein</div>
+    <header>
+      <h1 class="landing">
+        <span class="name n-paul">Paul</span>
+        <span class="name n-jenne">Jennewein</span>
+      </h1>
     </header>
 
     <!-- 2 · HERO-VIDEO -->
     <div class="hero-wrap">
       <div class="hero-media">
-        <video src="bilder/hero.mp4" autoplay muted loop playsinline poster="bilder/hero-poster.jpg" aria-label="Konzert in Wien"></video>
+        <video src="bilder/hero.mp4" muted loop playsinline preload="none" poster="bilder/hero-poster.jpg" aria-label="Konzert in Wien"></video>
       </div>
     </div>
 
@@ -185,7 +193,7 @@
 
         <!-- Baran Kok (Foto: @lilly.bkb) — Kachel-Link + separater, nur-bei-Hover-sichtbarer Foto-Credit -->
         <div class="tile">
-          <img src="bilder/baran-kok.jpg" alt="Baran Kok live auf der Bühne – 808factory, Tourstopp Wien">
+          <img loading="lazy" src="bilder/baran-kok.jpg" alt="Baran Kok live auf der Bühne – 808factory, Tourstopp Wien">
           <a class="tile-link" href="https://www.instagram.com/p/DO3fJEmiA9F/" target="_blank" rel="noopener" aria-label="Baran Kok – 808factory"></a>
           <span class="overlay">
             <span class="o-name">Baran Kok<span class="o-sub">Tourstopp Wien</span></span>
@@ -196,7 +204,7 @@
 
         <!-- Dahabflex (Konzertvideo, stumm; Standbild als Poster) -->
         <a class="tile" href="https://www.instagram.com/p/DTxqu5kCO92/" target="_blank" rel="noopener">
-          <video src="bilder/dahabflex.mp4" autoplay muted loop playsinline poster="bilder/dahabflex.jpg" aria-label="Dahabflex live auf der Bühne – 808factory, Tourstopp Wien"></video>
+          <video src="bilder/dahabflex.mp4" muted loop playsinline preload="none" poster="bilder/dahabflex.jpg" aria-label="Dahabflex live auf der Bühne – 808factory, Tourstopp Wien"></video>
           <span class="overlay">
             <span class="o-name">Dahabflex<span class="o-sub">Tourstopp Wien</span></span>
             <span class="o-desc">808factory — Advancing &amp; Eventmanagement.</span>
@@ -205,7 +213,7 @@
 
         <!-- Aymen & Amo (eigenes Foto) -->
         <a class="tile" href="https://www.instagram.com/p/DOOYxY2DN2W/" target="_blank" rel="noopener">
-          <img src="bilder/aymen-amo.jpg" alt="Aymen &amp; Amo – Show bei 808factory">
+          <img loading="lazy" src="bilder/aymen-amo.jpg" alt="Aymen &amp; Amo – Show bei 808factory">
           <span class="overlay">
             <span class="o-name">Aymen &amp; Amo<span class="o-sub">Tourstopp Wien</span></span>
             <span class="o-desc">808factory — Eventmanagement.</span>
@@ -216,7 +224,7 @@
 
         <!-- Mahlwerk — Logo (Stern auf schwarzem Grund) -->
         <a class="tile logo-tile big" href="https://www.instagram.com/mahlwerk.mwk" target="_blank" rel="noopener">
-          <img src="bilder/mahlwerk-logo.jpg" alt="Mahlwerk Kollektiv für Musik &amp; Kultur">
+          <img loading="lazy" src="bilder/mahlwerk-logo.jpg" alt="Mahlwerk Kollektiv für Musik &amp; Kultur">
           <span class="overlay">
             <span class="o-name">Mahlwerk</span>
             <span class="o-desc">Mahlwerk Kollektiv für Musik &amp; Kultur — Label &amp; Finanzorganisation.</span>
@@ -225,7 +233,7 @@
 
         <!-- OYA! Open Air Festival -->
         <a class="tile" href="https://oyacollective.com" target="_blank" rel="noopener">
-          <img src="bilder/oya.jpg" alt="OYA! Open Air Festival">
+          <img loading="lazy" src="bilder/oya.jpg" alt="OYA! Open Air Festival">
           <span class="overlay">
             <span class="o-name">OYA! Open Air Festival</span>
             <span class="o-desc">OYA! Kunst- und Kulturverein — Projekt- &amp; Eventmanagement.</span>
@@ -234,7 +242,7 @@
 
         <!-- Ritmo Cattivo — Logo -->
         <a class="tile logo-tile" href="https://www.instagram.com/ritmocattivo" target="_blank" rel="noopener">
-          <img src="bilder/ritmo-logo.png" alt="Ritmo Cattivo">
+          <img loading="lazy" src="bilder/ritmo-logo.png" alt="Ritmo Cattivo">
           <span class="overlay">
             <span class="o-name">Ritmo Cattivo</span>
             <span class="o-desc">Eventmanagement &amp; Booking.</span>
@@ -245,7 +253,7 @@
 
         <!-- Interview · Union 1850 (Video-Loop, stumm) -->
         <a class="tile" href="https://www.instagram.com/reel/DXoeS1kjedu/" target="_blank" rel="noopener">
-          <video src="bilder/interview-union1850.mp4" autoplay muted loop playsinline poster="bilder/interview-union1850-poster.jpg" aria-label="Interview Union 1850 – 808factory"></video>
+          <video src="bilder/interview-union1850.mp4" muted loop playsinline preload="none" poster="bilder/interview-union1850-poster.jpg" aria-label="Interview Union 1850 – 808factory"></video>
           <span class="overlay">
             <span class="o-name">Fragen an Union 1850</span>
             <span class="o-desc">808factory — Interview &amp; Content.</span>
@@ -254,7 +262,7 @@
 
         <!-- Interview · Romero (Video-Loop, stumm) -->
         <a class="tile" href="https://www.instagram.com/reel/DWQ3nkVDWdE/" target="_blank" rel="noopener">
-          <video src="bilder/interview-romero.mp4" autoplay muted loop playsinline poster="bilder/interview-romero-poster.jpg" aria-label="Interview Romero – 808factory"></video>
+          <video src="bilder/interview-romero.mp4" muted loop playsinline preload="none" poster="bilder/interview-romero-poster.jpg" aria-label="Interview Romero – 808factory"></video>
           <span class="overlay">
             <span class="o-name">Fragen an Romero</span>
             <span class="o-desc">808factory — Interview &amp; Content.</span>
@@ -286,6 +294,16 @@
       });
     }, {threshold:0.18, rootMargin:'0px 0px -8% 0px'});
     document.querySelectorAll('.tile, .io').forEach(function(el){ io.observe(el); });
+
+    // Videos erst laden/abspielen, wenn sie ins Bild scrollen (spart Datenvolumen & Akku)
+    var vio = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        var v = e.target;
+        if(e.isIntersecting){ v.play().catch(function(){}); }
+        else { v.pause(); }
+      });
+    }, {threshold:0.25});
+    document.querySelectorAll('video').forEach(function(v){ vio.observe(v); });
 
     // Hero-Video: klein -> groß beim Scrollen
     var media = document.querySelector('.hero-media');
