@@ -25,9 +25,6 @@
 <meta name="twitter:image" content="https://pauljennewein.com/bilder/og-image.jpg">
 
 <script>document.documentElement.classList.add('js')</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 {
@@ -53,6 +50,12 @@
 </script>
 
 <style>
+  /* Selbst gehostete Schriften (kein Google-CDN -> kein IP-Versand an Google, DSGVO-freundlich) */
+  @font-face{font-family:'League Spartan';font-style:normal;font-weight:800;font-display:swap;src:url(fonts/league-spartan-800.woff2) format('woff2')}
+  @font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/inter-400.woff2) format('woff2')}
+  @font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/inter-500.woff2) format('woff2')}
+  @font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/inter-600.woff2) format('woff2')}
+
   :root{
     --bg:#FFFFFF;--ink:#111111;--muted:#6A6A6A;--rule:rgba(0,0,0,0.12);
     --tile:#ECECEA;--ring:rgba(0,0,0,0.08);--radius:18px;
@@ -115,6 +118,11 @@
     opacity:0;transition:opacity .4s ease;pointer-events:none;z-index:2}
   .tile:hover img,.tile:hover video{filter:blur(7px) brightness(.55);transform:scale(1.06)}
   .tile:hover .overlay{opacity:1}
+  /* Tastatur-Fokus: Overlay einblenden + klar sichtbarer Rahmen */
+  .tile:focus-within .overlay{opacity:1}
+  .tile:focus-within img,.tile:focus-within video{filter:blur(7px) brightness(.55)}
+  .tile:focus-within{box-shadow:0 0 0 3px var(--ink)}
+  .row:focus-visible,.o-credit:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:4px}
   .o-name{font-weight:600;font-size:17px;letter-spacing:-0.01em;color:#fff}
   .o-name .o-sub{font-weight:400;opacity:.82;margin-left:6px}   /* "Tourstopp Wien": gleiche Größe, leichter */
   .o-desc{font-size:13.5px;color:#EDEDED;opacity:.95;margin-top:7px;line-height:1.5;max-width:27ch}
