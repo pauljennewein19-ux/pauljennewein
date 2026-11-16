@@ -57,8 +57,8 @@
   @font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/inter-600.woff2) format('woff2')}
 
   :root{
-    --bg:#FFFFFF;--ink:#111111;--muted:#6A6A6A;--rule:rgba(0,0,0,0.12);
-    --tile:#ECECEA;--ring:rgba(0,0,0,0.08);--radius:18px;
+    --bg:#1a2f96;--ink:#ffffff;--muted:rgba(255,255,255,0.5);--rule:rgba(255,255,255,0.18);
+    --tile:#1530a0;--ring:rgba(255,255,255,0.1);--radius:0px;
     --head:"League Spartan",Helvetica,Arial,sans-serif;
     --body:"Inter",Helvetica,Arial,sans-serif;
     --max:1040px;
@@ -100,16 +100,14 @@
 
   /* ---------- 4 · Projekte ---------- */
   .section{margin-top:var(--gap)}
-  .grid{display:flex;flex-wrap:wrap;justify-content:center;gap:35px}
-  .tile{flex:0 0 calc((100% - 70px)/3);min-width:0;position:relative;aspect-ratio:4/5;
-    border-radius:var(--radius);overflow:hidden;background:var(--tile);display:block;cursor:pointer;
-    box-shadow:0 0 0 1px var(--ring);
-    transition:transform .55s cubic-bezier(.22,.61,.36,1), box-shadow .45s ease, opacity .7s ease}
-  @media(max-width:820px){.tile{flex-basis:calc((100% - 35px)/2)}}
-  @media(max-width:520px){.tile{flex-basis:100%}}
-  .js .tile{opacity:0;transform:translateY(24px)}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+  .tile{position:relative;aspect-ratio:1/1;
+    overflow:hidden;background:var(--tile);display:block;cursor:pointer;
+    transition:opacity .7s ease}
+  @media(max-width:820px){.grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.grid{grid-template-columns:1fr}}
+  .js .tile{opacity:0;transform:translateY(24px);transition:transform .55s cubic-bezier(.22,.61,.36,1), opacity .7s ease}
   .js .tile.in{opacity:1;transform:translateY(0)}
-  .tile:hover{transform:translateY(-6px);box-shadow:0 22px 50px rgba(0,0,0,.18), 0 0 0 1px rgba(0,0,0,0.14)}
 
   .tile img,.tile video{width:100%;height:100%;object-fit:cover;display:block;
     transition:filter .45s ease, transform .6s ease}
@@ -121,7 +119,7 @@
   /* Tastatur-Fokus: Overlay einblenden + klar sichtbarer Rahmen */
   .tile:focus-within .overlay{opacity:1}
   .tile:focus-within img,.tile:focus-within video{filter:blur(7px) brightness(.55)}
-  .tile:focus-within{box-shadow:0 0 0 3px var(--ink)}
+  .tile:focus-within{outline:3px solid var(--ink);outline-offset:-3px}
   .row:focus-visible,.o-credit:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:4px}
   .o-name{font-weight:600;font-size:17px;letter-spacing:-0.01em;color:#fff}
   .o-name .o-sub{font-weight:400;opacity:.82;margin-left:6px}   /* "Tourstopp Wien": gleiche Größe, leichter */
@@ -154,7 +152,7 @@
   .row{display:block;padding:18px 0;border-bottom:1px solid var(--rule);color:var(--ink);
     text-decoration:none;font-size:18px;transition:color .25s ease, padding-left .35s ease}
   .row:first-child{border-top:1px solid var(--rule)}
-  .row:hover{color:#000;padding-left:12px}
+  .row:hover{color:#fff;padding-left:12px}
   footer{margin:clamp(120px,15vw,180px) 0 90px;color:var(--muted);font-size:14px}
   footer a{color:inherit;text-decoration:none}
   footer a:hover{color:var(--ink);text-decoration:underline}
