@@ -62,7 +62,7 @@
     --head:"League Spartan",Helvetica,Arial,sans-serif;
     --body:"Inter",Helvetica,Arial,sans-serif;
     --max:1040px;
-    --gap:clamp(120px,15vw,200px);
+    --gap:clamp(80px,10vw,130px);
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;scroll-behavior:smooth}
@@ -93,8 +93,8 @@
   .js .io.in{opacity:1;transform:none}
 
   /* ---------- 3 · Einleitung (wechselseitig) ---------- */
-  .intro{text-align:left;max-width:920px}
-  .intro p{font-size:clamp(20px,2.5vw,30px);font-weight:500;line-height:1.3;
+  .intro{text-align:left;max-width:920px;font-family:var(--head);text-transform:uppercase}
+  .intro p{font-size:clamp(36px,5vw,64px);font-weight:800;line-height:1.1;
     transition:opacity 1.7s ease, transform 1.8s cubic-bezier(.2,.8,.3,1)}
   .intro p + p{margin-top:clamp(56px,6vw,80px)}
 
