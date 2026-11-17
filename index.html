@@ -148,6 +148,8 @@
   /* ---------- 5 · Karte ---------- */
   .map-section{display:block}
   .map-section svg{width:100%;height:auto;overflow:visible}
+  .map-label{font-family:var(--head);font-weight:800;text-transform:uppercase;
+    font-size:clamp(36px,5vw,64px);line-height:1.1;margin-bottom:clamp(16px,2vw,28px)}
 
   /* ---------- 6 · Kontakt ---------- */
   .k-title{font-family:var(--head);font-weight:800;text-transform:uppercase;
@@ -267,6 +269,7 @@
 
     <!-- 5 · KARTE -->
     <section class="section map-section io t-left">
+      <p class="map-label">Zwischen Berlin, Wien &amp; Stuttgart.</p>
       <svg viewBox="0 0 700 560" xmlns="http://www.w3.org/2000/svg">
 
         <!-- Deutschland (Natural Earth, korrigierte Projektion: x=(lon-5)/13*440+130, y=(56-lat)/10*560) -->
@@ -289,8 +292,6 @@
         <circle cx="515" cy="436" r="4" fill="#fff"/>
         <text x="523" y="433" font-family="'Inter',Helvetica,Arial,sans-serif" font-size="12" font-weight="400" letter-spacing="0.06em" fill="#ffffff">Wien</text>
 
-        <!-- Satz links, eine Zeile, Intro-Stil -->
-        <text x="10" y="300" text-anchor="start" font-family="'League Spartan',Helvetica,Arial,sans-serif" font-weight="800" font-size="36" fill="#ffffff" letter-spacing="-0.01em">ZWISCHEN BERLIN, WIEN &amp; STUTTGART.</text>
 
       </svg>
     </section>
